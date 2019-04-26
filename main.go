@@ -70,10 +70,10 @@ func isWhitelisted(id int64) bool {
 
 func deleteFromTimeline(api *anaconda.TwitterApi, ageLimit time.Duration) {
 	timeline, err := getTimeline(api)
-
 	if err != nil {
-		log.Print("could not get timeline")
+		log.Print("could not get timeline", err)
 	}
+
 	for _, t := range timeline {
 		createdTime, err := t.CreatedAtTime()
 		if err != nil {
