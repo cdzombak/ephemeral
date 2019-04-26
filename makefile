@@ -13,7 +13,7 @@ dist: bootstrap main.go ## Build the ephemeral binary & distribution archive
 	zip -j dist/ephemeral.zip dist/ephemeral
 
 .PHONY: deploy
-deploy: dist ## Deploy TODO CHECK DEPS AND TODO DOC ENVAR
+deploy: dist ## Deploy built product to AWS under the name ephemeral-$EPHEMERAL_INSTANCE_NAME
 	bash ./deploy.sh
 
 .PHONY: clean

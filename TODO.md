@@ -1,0 +1,3 @@
+- [ ] update documentation for new makefile/build/deploy dev cycle
+- [ ] document deploy env var $EPHEMERAL_INSTANCE_NAME
+- [ ] make check buil ddeps target (go, awscli)
