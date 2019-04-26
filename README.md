@@ -67,7 +67,7 @@ WHITELIST = 1052624100617785344:1052942396034609152
 
 ### Trigger
 
-Set up a CloudWatch event to run your Lambda function, per [thees instructions](https://victoria.dev/verbose/running-a-free-twitter-bot-on-aws-lambda/#5-set-up-cloudwatch-events).
+Set up a CloudWatch event to run your Lambda function, per [these instructions](https://victoria.dev/verbose/running-a-free-twitter-bot-on-aws-lambda/#5-set-up-cloudwatch-events).
 
 ## License
 
