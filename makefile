@@ -6,8 +6,13 @@ help:
 bootstrap: ## Grab dependencies
 	go get github.com/ChimeraCoder/anaconda
 	go get github.com/aws/aws-lambda-go/lambda
+	go get github.com/crewjam/errset
+	go get github.com/pkg/errors
 
 dist: bootstrap main.go ## Build the ephemeral binary & distribution archive
+	golint -set_exit_status *.go
+	gofmt -e -w *.go
+	goimports -w *.go
 	mkdir -p dist
 	GOOS=linux go build -o dist/ephemeral
 	zip -j dist/ephemeral.zip dist/ephemeral
